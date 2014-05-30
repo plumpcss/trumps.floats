@@ -1,0 +1,16 @@
+{
+  "name": "plumpcss-floats",
+  "version": "0.1.0",
+  "authors": [
+    "James Howard <james@plumpdigital.co.uk>"
+  ],
+  "description": "Generic classes and silent classes for floats.",
+  "main": "_generic.floats.scss",
+  "keywords": [
+    "plumpcss",
+    "oocss",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.plumpdigital.co.uk/"
+}
