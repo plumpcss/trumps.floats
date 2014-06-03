@@ -2,12 +2,37 @@
     #FLOATS
 \*------------------------------------*/
 
-.fl,
-%fl {
-	float: left;
-}
+/**
+ *    Float helper classes. Use these to float elements on a micro level.
+ *    Classes can take a brackets format (e.g. `.f>) or an abbreviated
+ *    format (e.g. `.fl`). Toggle formats by overriding the
+ *    `$plump-enable-floats--bracket` variable defined below.
+ */
 
-.fr,
-%fr {
-	float: right;
+ $plump-enable-floats--bracket: 	false !default;
+
+ @if ($plump-enable-floats--bracket == true) {
+
+ 	.#{$plump-namespace}f\<,
+ 	%#{$plump-namespace}f\< {
+ 		float: left;
+ 	}
+
+ 	.#{$plump-namespace}f\>,
+ 	%#{$plump-namespace}f\> {
+ 		float: right;
+ 	}
+ }
+
+ @else {
+
+	.#{$plump-namespace}fl,
+	%#{$plump-namespace}fl {
+		float: left;
+	}
+
+	.#{$plump-namespace}fr,
+	%#{$plump-namespace}fr {
+		float: right;
+	}
 }

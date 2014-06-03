@@ -1,15 +1,17 @@
 {
   "name": "plumpcss-floats",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
-    "James Howard <james@plumpdigital.co.uk>"
+    "James Howard <james@plumpdigital.co.uk>",
+    "Jon Hurrell <jon@plumpdigital.co.uk>"
   ],
   "description": "Generic classes and silent classes for floats.",
-  "main": "_generic.floats.scss",
+  "main": "_trumps.floats.scss",
   "keywords": [
     "plumpcss",
     "oocss",
-    "css"
+    "css",
+    "helper"
   ],
   "license": "MIT",
   "homepage": "http://www.plumpdigital.co.uk/"
