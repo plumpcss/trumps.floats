@@ -4,35 +4,46 @@
 
 /**
  *    Float helper classes. Use these to float elements on a micro level.
- *    Classes can take a brackets format (e.g. `.f>) or an abbreviated
+ *    Classes can take a symbol format (e.g. `.f>) or an abbreviated
  *    format (e.g. `.fl`). Toggle formats by overriding the
- *    `$plump-enable-floats--bracket` variable defined below.
+ *    `$plump-enable-floats--symbol` variable defined below, in the project's
+ *    `style.scss`.
  */
 
- $plump-enable-floats--bracket: 	false !default;
+$plump-enable-floats--symbol: 		false !default;
 
- @if ($plump-enable-floats--bracket == true) {
+@if ($plump-enable-floats--symbol == true) {
 
- 	.#{$plump-namespace}f\<,
- 	%#{$plump-namespace}f\< {
- 		float: left;
- 	}
+	.#{$plump-namespace}f\<,
+	%#{$plump-namespace}f\< {
+		float: left !important;
+	}
 
- 	.#{$plump-namespace}f\>,
- 	%#{$plump-namespace}f\> {
- 		float: right;
- 	}
- }
+	.#{$plump-namespace}f\>,
+	%#{$plump-namespace}f\> {
+		float: right !important;
+	}
 
- @else {
+	.#{$plump-namespace}f\<\>,
+	%#{$plump-namespace}f\<\> {
+		float: none !important;
+	}
+}
+
+@else {
 
 	.#{$plump-namespace}fl,
 	%#{$plump-namespace}fl {
-		float: left;
+		float: left !important;
 	}
 
 	.#{$plump-namespace}fr,
 	%#{$plump-namespace}fr {
-		float: right;
+		float: right !important;
+	}
+
+	.#{$plump-namespace}fn,
+	%#{$plump-namespace}fn {
+		float: none !important;
 	}
 }
