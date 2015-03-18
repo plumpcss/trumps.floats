@@ -1,49 +1,54 @@
-/*------------------------------------*\
-    #FLOATS
-\*------------------------------------*/
+///*------------------------------------*\
+//   #FLOATS
+//\*------------------------------------*/
 
-/**
- *    Float helper classes. Use these to float elements on a micro level.
- *    Classes can take a symbol format (e.g. `.f>) or an abbreviated
- *    format (e.g. `.fl`). Toggle formats by overriding the
- *    `$plump-enable-floats--symbol` variable defined below, in the project's
- *    `style.scss`.
- */
+//    Float helper classes. Use these to float elements on a micro level.
+//    Classes can take a symbol format (e.g. `.f>) or an abbreviated
+//    format (e.g. `.fl`). Toggle formats by overriding the
+//    `$plump-enable-floats--symbol` variable defined below, in the project's
+//    `style.scss`.
+
+//    Predefine the variables below in order to alter and enable specific features.
+$plump-floats-namespace:            $plump-namespace !default;
 
 $plump-enable-floats--symbol: 		false !default;
 
+
+
+
+
 @if ($plump-enable-floats--symbol == true) {
 
-	.#{$plump-namespace}f\<,
-	%#{$plump-namespace}f\< {
+	.#{$plump-floats-namespace}u-f\<,
+	%#{$plump-floats-namespace}u-f\< {
 		float: left !important;
 	}
 
-	.#{$plump-namespace}f\>,
-	%#{$plump-namespace}f\> {
+	.#{$plump-floats-namespace}u-f\>,
+	%#{$plump-floats-namespace}u-f\> {
 		float: right !important;
 	}
 
-	.#{$plump-namespace}f\<\>,
-	%#{$plump-namespace}f\<\> {
+	.#{$plump-floats-namespace}u-f\<\>,
+	%#{$plump-floats-namespace}u-f\<\> {
 		float: none !important;
 	}
 }
 
 @else {
 
-	.#{$plump-namespace}fl,
-	%#{$plump-namespace}fl {
+	.#{$plump-floats-namespace}u-fl,
+	%#{$plump-floats-namespace}u-fl {
 		float: left !important;
 	}
 
-	.#{$plump-namespace}fr,
-	%#{$plump-namespace}fr {
+	.#{$plump-floats-namespace}u-fr,
+	%#{$plump-floats-namespace}u-fr {
 		float: right !important;
 	}
 
-	.#{$plump-namespace}fn,
-	%#{$plump-namespace}fn {
+	.#{$plump-floats-namespace}u-fn,
+	%#{$plump-floats-namespace}u-fn {
 		float: none !important;
 	}
 }
